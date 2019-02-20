@@ -16,7 +16,9 @@ public class ViewsController {
        return "home";
    }
     @RequestMapping("/greeting")
-    public void greeting(@RequestParam (value="name", defaultValue="World") String name) {
-        System.out.println("greeting");
+    public String articleFragment(Model model) {
+        model.addAttribute("message", "wesh loulou");
+        System.out.println("qsdqsfsdfsdf");
+        return "articlesList :: articlesList";
     }
 }

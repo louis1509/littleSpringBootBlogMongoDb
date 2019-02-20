@@ -5,12 +5,14 @@ import application.input.ArticleInput;
 import application.repositories.ArticleRepository;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
 
+@Service
 public class ArticleServiceImpl implements ArticleService{
 
     @Autowired

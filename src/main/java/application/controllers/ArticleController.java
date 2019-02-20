@@ -39,15 +39,17 @@ public class ArticleController {
     }
 
     @PostMapping("/article")
-    ResponseEntity<?> createArticle(@Valid @RequestBody ArticleInput articleInput){
-        try {
+    ResponseEntity<?> createArticle(@Valid @RequestBody String articleInput){
+       /* try {
             articleInput.getArticle().set_id(ObjectId.get());
             articleService.saveArticle(articleInput);
             return  ResponseEntity.ok().body(articleInput);
         } catch (IOException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
 
-        }
+        }*/
+       System.out.println("Post Article : " + articleInput);
+       return ResponseEntity.ok().body("yahouuuu");
     }
 
 
