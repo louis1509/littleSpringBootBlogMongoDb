@@ -4,3 +4,11 @@
 footer{
     background-color: #e9ecef;
 }
+
+#results-block{
+    display: inline-flex;
+}
+img{
+
+    height:150px;
+}

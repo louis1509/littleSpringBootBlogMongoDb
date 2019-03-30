@@ -32,7 +32,13 @@ public class ArticleServiceImpl implements ArticleService{
             byte[] data = Base64.decodeBase64(encodedImage);
             OutputStream stream = new FileOutputStream(imagesLocation + articleInput.getArticle().get_id().toString() + extension);
             stream.write(data);
+            //set path of illustration
+            articleInput.getArticle().setPhoto("/images/" + articleInput.getArticle().get_id().toString() + extension);
+
+            
+
         }
+
 
         articleRepository.save(articleInput.getArticle());
 
@@ -42,6 +48,8 @@ public class ArticleServiceImpl implements ArticleService{
     public List<Article> getAllArticles(){
         return articleRepository.findAll();
     }
+
+
 
     public Optional<String> getFile(ArticleInput articleInput){
         return Optional.ofNullable(articleInput.getBase64photo());

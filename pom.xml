@@ -57,10 +57,19 @@
             <artifactId>bootstrap</artifactId>
             <version>3.3.7</version>
         </dependency>
-
     </dependencies>
 
+
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

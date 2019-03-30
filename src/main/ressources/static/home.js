@@ -2,7 +2,10 @@
 
 $(()=>{
 
+    //load articles
+    $("#articlesBlock").load('/greeting');
 
+    //reload articles onclick
     $("#postArticleButton").click((e)=>{
         const articleInput = HomeJS.retrieveArticleData();
         console.debug(JSON.stringify(articleInput));
@@ -17,11 +20,11 @@ $(()=>{
                 $("#articlesBlock").load('/greeting');
             },
             success : function(){
-                alert('success');
+               console.debug('succefuly saved');
 
             },
             error : function(error){
-                alert('error : ' + error);
+                console.debug('erre while saving : ' + error);
             }
         });
 

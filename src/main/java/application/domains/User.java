@@ -3,7 +3,7 @@ package application.domains;
 import org.springframework.data.annotation.Id;
 
 
-public class Author {
+public class User {
 
     @Id
     private String id;
@@ -12,10 +12,11 @@ public class Author {
     private String lastName;
     private String login;
     private String password;
+    private String role;
 
-    public Author() {}
+    public User() {}
 
-    public Author(String firstName, String lastName) {
+    public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -63,7 +64,7 @@ public class Author {
     @Override
     public String toString() {
         return String.format(
-                "Author[id=%s, firstName='%s', lastName='%s']",
+                "User[id=%s, firstName='%s', lastName='%s']",
                 id, firstName, lastName);
     }
 

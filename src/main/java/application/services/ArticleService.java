@@ -13,4 +13,6 @@ public interface ArticleService {
     public void saveArticle(ArticleInput articleInput) throws IOException;
 
     List<Article> getAllArticles();
+
+
 }
